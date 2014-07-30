@@ -10,6 +10,7 @@
 		B1FEA8B41989A2A500818B44 /* FCComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = B1FEA8B31989A2A500818B44 /* FCComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1FEA8BA1989A2A500818B44 /* FCComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FEA8AE1989A2A500818B44 /* FCComponents.framework */; };
 		B1FEA8C11989A2A500818B44 /* FCComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEA8C01989A2A500818B44 /* FCComponentsTests.swift */; };
+		B1FEA8CC1989A2BD00818B44 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEA8CB1989A2BD00818B44 /* SwitchControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B1FEA8B91989A2A500818B44 /* FCComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FEA8BF1989A2A500818B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1FEA8C01989A2A500818B44 /* FCComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCComponentsTests.swift; sourceTree = "<group>"; };
+		B1FEA8CB1989A2BD00818B44 /* SwitchControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		B1FEA8B01989A2A500818B44 /* FCComponents */ = {
 			isa = PBXGroup;
 			children = (
+				B1FEA8CA1989A2B100818B44 /* Controls */,
 				B1FEA8B31989A2A500818B44 /* FCComponents.h */,
 				B1FEA8B11989A2A500818B44 /* Supporting Files */,
 			);
@@ -100,6 +103,14 @@
 				B1FEA8BF1989A2A500818B44 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1FEA8CA1989A2B100818B44 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B1FEA8CB1989A2BD00818B44 /* SwitchControl.swift */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FEA8CC1989A2BD00818B44 /* SwitchControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +328,7 @@
 		B1FEA8C51989A2A500818B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -327,12 +340,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B1FEA8C61989A2A500818B44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
