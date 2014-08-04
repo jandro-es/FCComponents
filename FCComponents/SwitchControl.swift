@@ -77,14 +77,14 @@ import QuartzCore
         self.setupLayers()
     }
     
-    init(coder: NSCoder!) {
+    required  public init(coder: NSCoder!) {
         self.isOn = false;
         self.tintColor = kDefaultTintColor
         
         super.init(coder: coder)
     }
     
-    convenience init(frame frameRect: NSRect) {
+    convenience override init(frame frameRect: NSRect) {
         self.init(isOn: false, frame: frameRect, textOn: nil, textOff: nil, tintColor: nil)
     }
     
